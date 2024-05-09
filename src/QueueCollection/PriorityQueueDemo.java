@@ -1,30 +1,23 @@
 package QueueCollection;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class PriorityQueueDemo {
 
     public static void main(String[] args) {
 
-        PriorityQueue<String> queue = new PriorityQueue<>();
+       PriorityQueue<String> pq = new PriorityQueue<>();    //Comparator.reverseOrder() can be used as parameter to set max heap
+       pq.offer("arjit");
+       pq.offer("Arpit");
+       pq.offer("Anuj");
+       pq.offer("Arjit");
+       pq.offer("aryan");
+        System.out.println(pq); // priority queue shows elements in mainly shorted order as min Heap.
 
-        queue.add("Z");
-        queue.add("B");
-        queue.add("C");
-        queue.add("F");
-        queue.add("E");
+        System.out.println(pq.poll()); //it will remove the elements which have high priority
+        System.out.println(pq);
 
-//        Iterator<String> itr = queue.iterator();
-//        while (itr.hasNext()){
-//            System.out.println(itr.next());
-//        }
-
-//        for(String x: queue) {
-//            System.out.println(x);
-//        }
-
-        System.out.println(queue.size());
-
-
+        System.out.println(pq.peek());
     }
 }
